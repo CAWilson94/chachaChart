@@ -175,20 +175,3 @@ const Chart = (props: chartSeriesData) => {
 };
 
 export default Chart;
-
-/** 
- * There are definitly better ways to do this and I am very aware of the repeated code - maybe we can discuss! :D . 
- * Should be able to do something similar to websocket reference like const chartRef = useRef(null);
- * and then call something like this 
- * 
- *  chartRef.current.chart.update({
-        series: [{
-          data: props.updatedSeriesData, // Replace with the updated series data
-        }]
-
-  to update different properties etc. I have used highcharts in angular a lot but not react yet so I think there would be equivelents of setData on the series etc. 
-
-  For some of this I did use the high charts ChatGPT, which we do tend to use in the office. 
-  If you havent used it, it is worth a look! Although be wary, it will contradict itself and its always good to back this up with the demos they have (which are awesome) and your own tinkering etc! 
-  https://www.highcharts.com/chat/gpt/
- */

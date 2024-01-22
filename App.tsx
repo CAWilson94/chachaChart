@@ -3,13 +3,6 @@ import { Button } from 'react-bootstrap';
 import Chart from './Chart';
 import './style.css';
 
-/**
- * The notes for this project mentioned a plugin to look at websockets
- * However I would also suggest dev tools and using network tab -
- * either filter on 'ws' or in this case 'bitmex' is a lot more useful
- * and you can see all the messages coming in etc :)
- */
-
 export interface seriesData {
   timestamp: string;
   symbol: string;
@@ -118,16 +111,3 @@ const App = () => {
 };
 
 export default App;
-
-/**
- *
- *  Basic connection from websocket -
- *  Every update simply update state for the series required to pass to chart.
- *  Flow -> websocket message -> process data -> update states for Chart component.
- *  Data will come in as soon as component is opened. Something to look at is how this
- *  would deal with the component being open for a while.
- *
- *  One thing to note, this seems quite active during the day (morning hours) but evening / weekend
- *  the data points were sparse.
- *
- */
